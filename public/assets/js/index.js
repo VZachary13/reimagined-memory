@@ -48,9 +48,7 @@ const saveNote = (note) =>
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
     method: 'DELETE',
-    headers: {
-      'Content-Type': 'application/json'
-    }
+    
   });
 
 const renderActiveNote = () => {
@@ -164,7 +162,6 @@ const renderNoteList = async (notes) => {
 
     return liEl;
   };
-
   if (jsonNotes.length === 0) {
     noteListItems.push(createLi('No saved Notes', false));
   }
